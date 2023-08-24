@@ -12,10 +12,10 @@ export const createConsole = (options: ICreateConsoleOptions) => {
                 if (typeof p === 'string' && ['log', 'warn', 'error'].includes(p)) {
                    const { prefix, shuffix } = options;
                    if (prefix) {
-                    args.unshift(`前缀： ${prefix}`);
+                    args.unshift(`\n 前缀： ${prefix}\n`);
                    }
                    if (shuffix) {
-                    args.push(`后缀：${shuffix}`);
+                    args.push(`\n 后缀：${shuffix}\n`);
                    }
                    return Reflect.get(target, p, receiver)(...args);
                 }
