@@ -6,8 +6,8 @@
   "scripts": {
     "watch:1": "ts-node-dev --respawn 1.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["study", "demo", "rxjs"],
+  "author": "fireman-34",
   "license": "ISC",
   "dependencies": {
     "rxjs": "^7.8.1"
