@@ -4,7 +4,8 @@
   "description": "学习 Rxjs 项目， 我太高估自己了，捂脸，先学点简单的压压惊",
   "main": "index.js",
   "scripts": {
-    "watch:1": "ts-node-dev --respawn 1.ts"
+    "watch:1": "ts-node-dev --respawn 1.ts",
+    "gen:class": "pwsh ./script/createClass.ps1"
   },
   "keywords": ["study", "demo", "rxjs"],
   "author": "fireman-34",
