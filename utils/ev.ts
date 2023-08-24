@@ -1,4 +1,5 @@
 import { EventEmitter } from 'events';
+import { Observable, Subscriber } from 'rxjs';
 import type { AddEventListenerOptions, EventListenerObject, EventListenerOptions, HasEventTargetAddRemove } from 'rxjs/internal/observable/fromEvent';
 
 export class RxjsEvent<T = unknown> extends EventEmitter implements HasEventTargetAddRemove<T> {
@@ -25,3 +26,14 @@ export class RxjsEvent<T = unknown> extends EventEmitter implements HasEventTarg
     super.removeListener(type, listener as any);
   }
 }
+
+export const creatObservableAndSubscribe = <T>() => {
+  let subscribe: Subscriber<T>;
+  const observable = new Observable<T>((subscriber => { 
+    subscribe = subscriber;
+   }));
+   return {
+    observable,
+    subscribe,
+   }
+};
