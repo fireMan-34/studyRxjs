@@ -9,7 +9,8 @@ export const createConsole = (options: ICreateConsoleOptions) => {
     return new Proxy(console, {
         get(target, p, receiver) {
             return (...args) => {
-                if (typeof p === 'string' && ['log', 'warn', 'error'].includes(p)) {
+                const wrapperFix: (keyof typeof console)[] = [ 'log', 'warn', 'error', 'info']
+                if (typeof p === 'string' && wrapperFix.includes(p as keyof typeof console)) {
                    const { prefix, shuffix } = options;
                    if (prefix) {
                     args.unshift(`\n 前缀： ${prefix}\n`);
@@ -17,8 +18,8 @@ export const createConsole = (options: ICreateConsoleOptions) => {
                    if (shuffix) {
                     args.push(`\n 后缀：${shuffix}\n`);
                    }
-                   return Reflect.get(target, p, receiver)(...args);
                 }
+                return Reflect.get(target, p, receiver)(...args);
             };
         },
     })
