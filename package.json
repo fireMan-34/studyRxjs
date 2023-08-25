@@ -8,7 +8,8 @@
     "watch:1": "ts-node-dev -r tsconfig-paths/register --clear --respawn 1.ts",
     "watch:2": "ts-node-dev -r tsconfig-paths/register --clear --respawn 2.ts",
     "watch:3": "ts-node-dev -r tsconfig-paths/register --clear --respawn 3.ts",
-    "watch:4": "ts-node-dev -r tsconfig-paths/register --clear --respawn 4.ts"
+    "watch:4": "ts-node-dev -r tsconfig-paths/register --clear --respawn 4.ts",
+    "watch:5": "ts-node-dev -r tsconfig-paths/register --clear --respawn 5.ts"
   },
   "keywords": [
     "study",
