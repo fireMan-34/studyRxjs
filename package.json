@@ -6,7 +6,8 @@
   "scripts": {
     "gen:class": "pwsh ./script/createClass.ps1",
     "watch:1": "ts-node-dev -r tsconfig-paths/register --clear --respawn 1.ts",
-    "watch:2": "ts-node-dev -r tsconfig-paths/register --clear --respawn 2.ts"
+    "watch:2": "ts-node-dev -r tsconfig-paths/register --clear --respawn 2.ts",
+    "watch:3": "ts-node-dev -r tsconfig-paths/register --clear --respawn 3.ts"
   },
   "keywords": [
     "study",
