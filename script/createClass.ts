@@ -20,7 +20,7 @@ async function genCmd () {
     }
     packageJson.scripts[cmdName] = `ts-node-dev -r tsconfig-paths/register --clear --respawn ${className}.ts`;
     const nextPackageJsonContent = JSON.stringify(packageJson, null, 2);
-    await writeFile(join(cwd(), '../package.json'), nextPackageJsonContent, { encoding: 'utf8' });
+    await writeFile(join(cwd(), 'package.json'), nextPackageJsonContent, { encoding: 'utf8' });
 };
 
 async function updateCode() {
@@ -37,6 +37,7 @@ async function main() {
         if (Number.isNaN(Number(className))) {
             throw new TypeError(`${className} must be a number`);
         }
+        logger.log(`当前执行路径: ${cwd()}`)
         await genCmd();
         await updateCode();
     } catch(err) {
