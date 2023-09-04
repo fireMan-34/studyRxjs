@@ -14,7 +14,8 @@
     "watch:7": "ts-node-dev -r tsconfig-paths/register --clear --respawn 7.ts",
     "watch:8": "ts-node-dev -r tsconfig-paths/register --clear --respawn 8.ts",
     "watch:9": "ts-node-dev -r tsconfig-paths/register --clear --respawn 9.ts",
-    "watch:10": "ts-node-dev -r tsconfig-paths/register --clear --respawn 10.ts"
+    "watch:10": "ts-node-dev -r tsconfig-paths/register --clear --respawn 10.ts",
+    "watch:11": "ts-node-dev -r tsconfig-paths/register --clear --respawn 11.ts"
   },
   "keywords": [
     "study",
