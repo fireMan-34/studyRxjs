@@ -1,4 +1,4 @@
-import { AsyncSubject, BehaviorSubject ,lastValueFrom, firstValueFrom, take } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, Subject  , lastValueFrom, firstValueFrom, take } from 'rxjs';
 import { createConsole } from 'utils/log';
 
 const logger = createConsole({
@@ -9,7 +9,8 @@ const logger = createConsole({
 async function main() {
     try {
         // const asyncSubject = new AsyncSubject<number>();
-        const asyncSubject = new BehaviorSubject<number>(0);
+        // const asyncSubject = new BehaviorSubject<number>(0);
+        const asyncSubject = new Subject();
         asyncSubject.next(1);
         lastValueFrom(asyncSubject).then((value: number) => { console.log('promise last 返回的观察值:', value) })
         .catch(logger.error);
