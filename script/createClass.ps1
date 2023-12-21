@@ -14,4 +14,4 @@ Rename-Item -Path .\simple.ts -NewName "$Class.ts"
 .\node_modules\.bin\ts-node-cwd.ps1 -r tsconfig-paths/register .\script\createClass.ts $Class
 
 # * 启动自动化调试
-pnpm run "watch:$Class"
+pnpm run "watch $Class"
