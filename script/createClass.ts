@@ -38,7 +38,8 @@ async function main() {
             throw new TypeError(`${className} must be a number`);
         }
         logger.log(`当前执行路径: ${cwd()}`)
-        await genCmd();
+        // 采用脚本变量形式降低 package Json 代码
+        // await genCmd();
         await updateCode();
     } catch(err) {
         logger.error(err);

@@ -5,20 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gen:class": "pwsh ./script/createClass.ps1",
-    "watch:1": "ts-node-dev -r tsconfig-paths/register --clear --respawn 1.ts",
-    "watch:2": "ts-node-dev -r tsconfig-paths/register --clear --respawn 2.ts",
-    "watch:3": "ts-node-dev -r tsconfig-paths/register --clear --respawn 3.ts",
-    "watch:4": "ts-node-dev -r tsconfig-paths/register --clear --respawn 4.ts",
-    "watch:5": "ts-node-dev -r tsconfig-paths/register --clear --respawn 5.ts",
-    "watch:6": "ts-node-dev -r tsconfig-paths/register --clear --respawn 6.ts",
-    "watch:7": "ts-node-dev -r tsconfig-paths/register --clear --respawn 7.ts",
-    "watch:8": "ts-node-dev -r tsconfig-paths/register --clear --respawn 8.ts",
-    "watch:9": "ts-node-dev -r tsconfig-paths/register --clear --respawn 9.ts",
-    "watch:10": "ts-node-dev -r tsconfig-paths/register --clear --respawn 10.ts",
-    "watch:11": "ts-node-dev -r tsconfig-paths/register --clear --respawn 11.ts",
-    "watch:12": "ts-node-dev -r tsconfig-paths/register --clear --respawn 12.ts",
-    "watch:13": "ts-node-dev -r tsconfig-paths/register --clear --respawn 13.ts",
-    "watch:15": "ts-node-dev -r tsconfig-paths/register --clear --respawn 15.ts"
+    "watch": "ts-node ./script/watchClass.ts"
   },
   "keywords": [
     "study",
